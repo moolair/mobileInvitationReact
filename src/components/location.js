@@ -27,12 +27,14 @@ const Location = () => {
     }, []);
 
     return (
-        <div class="container text-center">
-            <div class="row">
-                <div class="col">
+        <div className="container text-center">
+            <div className="row">
+                <div className="col">
                     <h3>Location</h3>
+                    <br />
                     {/* <!-- 맵 생성 실행 --> */}
-                    <div id="map" class="map"></div>
+                    <div id="map" className="map"></div>
+                    <br />
                     <h4>엘리스 몽드</h4>
                     <p>서울특별시 용산구 소월로 302</p>
                     <p>02-511-2266 / 02-6259-1010</p>

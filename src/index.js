@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import Location from './components/location';
 import Gallery from './components/gallary';
+import Gift from './components/gift';
+import Comments from "./components/comments/comments";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,6 +15,8 @@ root.render(
     <App />
     <Gallery />
     <Location />
+    <Gift />
+    <Comments />
   </React.StrictMode>
 );
 
