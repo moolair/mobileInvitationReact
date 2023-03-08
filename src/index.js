@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { FirebaseProvider } from './components/firebase';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 import Location from './components/location';
 import Gallery from './components/gallary';
 import Gift from './components/gift';
-import Comments from "./components/comments/comments";
+import GuestBook from './components/comments/guestbook';
+// import Comments from "./components/comments/comments";
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,7 +18,10 @@ root.render(
     <Gallery />
     <Location />
     <Gift />
-    <Comments />
+    {/* <Comments currentUserId={3} /> */}
+    <FirebaseProvider>
+      <GuestBook />
+    </FirebaseProvider>
   </React.StrictMode>
 );
 
