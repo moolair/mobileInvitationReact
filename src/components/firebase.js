@@ -23,6 +23,11 @@ const database = getDatabase(app);
 
 const FirebaseContext = createContext(null);
 
+function StartFirebase(app) {
+    return getDatabase(app);
+}
+export default StartFirebase;
+
 export const useFirebase = () => useContext(FirebaseContext);
 
 export const FirebaseProvider = (props) => {
