@@ -3,7 +3,7 @@ import StartFirebase from '../firebase';
 import { ref, onValue } from 'firebase/database';
 import { render } from '@testing-library/react';
 
-const db = StartFirebase();
+export const db = StartFirebase();
 
 export class RealtimeData extends React.Component {
     constructor() {
@@ -32,18 +32,21 @@ export class RealtimeData extends React.Component {
             <div>
                 <div className="container">
                     <div className='row'>
-                        {this.state.data.map((row, index) => {
+                        {this.state.data.reverse().map((row, index) => {
                             return (
-                                <div class="col-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">{index} {row.key}</h5>
-                                            <p class="card-text">{row.data.message}</p>
+                                <div className="card col-12 mb-4">
+                                    <div className="card-body">
 
-                                            {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
-                                        </div>
+                                        <h5 className="card-title">
+                                            {/* {index} */}
+                                            {/* {row.key} */}
+                                            {row.data.name}
+
+                                        </h5>
+                                        <p className="card-text">{row.data.message}</p>
+                                        <p className="card-text">{row.key}</p>
+                                        {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
                                     </div>
-                                    <br />
                                 </div>
                             )
                         })}

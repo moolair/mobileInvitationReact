@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import { useFirebase } from '../firebase';
 import { RealtimeData } from './realtimeData';
+import { ref, set } from 'firebase/database';
 
 function GuestBook() {
 
     const firebase = useFirebase(); //const db
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
+    const date = Date().toLocaleString();
+    // const [date, setDate] = React.useState(new Date());
     console.log('Firebase', firebase);
 
     return (
@@ -35,8 +38,7 @@ function GuestBook() {
                             type="text" placeholder="Enter your message" />
                     </div>
                     <button type="reset" className="btn btn-dark btn-lg btn-block" onClick={() => {
-
-                        firebase.putData('guests/' + name, { message });
+                        firebase.putData('guests/' + date, { name, message });
                     }}>축하메세지 남기기</button>
                 </div>
             </div>
