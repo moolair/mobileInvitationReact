@@ -1,24 +1,12 @@
 // import logo from './logo.svg';
-import YJBNsubmain from './img/main/1.jpg';
-import YJBNsubmain2 from './img/yj.png';
+import YJBNsubmain from './img/main/1.jpeg';
+// import YJBNsubmain2 from './img/yj.png';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
         <div className="container text-center">
           <div className="row">
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
@@ -31,8 +19,7 @@ function App() {
                 <div className="carousel-item active">
                   <img src={YJBNsubmain} className="d-block w-100" alt="..." />
                   <div className="carousel-caption d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5>저희 결혼합니다.</h5>
                   </div>
                 </div>
                 {/* <div className="carousel-item">
@@ -127,14 +114,14 @@ function App() {
             <div>
               <br />
               <h5>아버지 조석현</h5>
-              <a href='tel:01045841389' className="fa fa-phone fa-2x col-lg-2 col-sm-3" aria-hidden="true"></a>
-              <a href="sms:01045841389" className="fa fa-comment-dots fa-2x col-lg-2 col-sm-3" aria-hidden="true"></a>
+              <a href='tel:01045841389' className="fa fa-phone fa-2x col-3" aria-hidden="true"></a>
+              <a href="sms:01045841389" className="fa fa-comment-dots fa-2x col-3" aria-hidden="true"></a>
             </div>
             <div>
               <br />
               <h5>어머니 김경희</h5>
-              <a href='tel:01036955169' className="fa fa-phone fa-2x col-lg-2 col-sm-3" aria-hidden="true"></a>
-              <a href="sms:01036955169" className="fa fa-comment-dots fa-2x col-lg-2 col-sm-3" aria-hidden="true"></a>
+              <a href='tel:01036955169' className="fa fa-phone fa-2x col-3" aria-hidden="true"></a>
+              <a href="sms:01036955169" className="fa fa-comment-dots fa-2x col-3" aria-hidden="true"></a>
             </div>
           </div>
           <div className="col">
@@ -142,14 +129,14 @@ function App() {
             <div>
               <br />
               <h5>아버지 이현주</h5>
-              <a href='tel:01053497688' className="fa fa-phone fa-2x col-lg-2 col-sm-3" aria-hidden="true"></a>
-              <a href="sms:01053497688" className="fa fa-comment-dots fa-2x col-lg-2 col-sm-3" aria-hidden="true"></a>
+              <a href='tel:01053497688' className="fa fa-phone fa-2x col-3" aria-hidden="true"></a>
+              <a href="sms:01053497688" className="fa fa-comment-dots fa-2x col-3" aria-hidden="true"></a>
             </div>
             <div>
               <br />
               <h5>어머니 노인숙</h5>
-              <a href='tel:01063407688' className="fa fa-phone fa-2x col-lg-2 col-sm-3" aria-hidden="true"></a>
-              <a href="sms:01063407688" className="fa fa-comment-dots fa-2x col-lg-2 col-sm-3" aria-hidden="true"></a>
+              <a href='tel:01063407688' className="fa fa-phone fa-2x col-3" aria-hidden="true"></a>
+              <a href="sms:01063407688" className="fa fa-comment-dots fa-2x col-3" aria-hidden="true"></a>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { createContext, useContext } from "react";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase, set, ref } from "firebase/database";
+// import firebase from "./firebase";
 
 const firebaseConfig = {
     apiKey: "AIzaSyA638grCAbXxrc0Un4mtqhWNuIz3-4FxBs",
@@ -19,14 +20,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 // const firebaseAuth = getAuth(app);
-const database = getDatabase(app);
+export const database = getDatabase(app);
 
 const FirebaseContext = createContext(null);
-
-function StartFirebase(app) {
-    return getDatabase(app);
-}
-export default StartFirebase;
 
 export const useFirebase = () => useContext(FirebaseContext);
 

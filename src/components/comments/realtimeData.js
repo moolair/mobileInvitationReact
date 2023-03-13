@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import StartFirebase from '../firebase';
+import { database } from '../firebase';
 import { ref, onValue } from 'firebase/database';
 import { render } from '@testing-library/react';
 
-export const db = StartFirebase();
+// export const db = database;
 
 export class RealtimeData extends React.Component {
     constructor() {
@@ -14,7 +14,7 @@ export class RealtimeData extends React.Component {
     }
 
     componentDidMount() {
-        const dbRef = ref(db, 'guests');
+        const dbRef = ref(database, 'guests');
 
         onValue(dbRef, (snapshot) => {
             let records = [];
@@ -44,7 +44,7 @@ export class RealtimeData extends React.Component {
 
                                         </h5>
                                         <p className="card-text">{row.data.message}</p>
-                                        <p className="card-text">{row.key}</p>
+                                        <p className="card-text">{row.data.date}</p>
                                         {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
                                     </div>
                                 </div>

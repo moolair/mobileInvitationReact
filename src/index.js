@@ -10,6 +10,7 @@ import Gift from './components/gift';
 import GuestBook from './components/comments/guestbook';
 // import Comments from "./components/comments/comments";
 import reportWebVitals from './reportWebVitals';
+import { RealtimeData } from './components/comments/realtimeData';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,8 +20,9 @@ root.render(
     <Location />
     <Gift />
     {/* <Comments currentUserId={3} /> */}
+    <GuestBook />
     <FirebaseProvider>
-      <GuestBook />
+      <RealtimeData />
     </FirebaseProvider>
   </React.StrictMode>
 );
