@@ -8,6 +8,13 @@ import yjbn7 from '../img/YJBN-wedding/yjbn7.jpeg';
 import yjbn8 from '../img/YJBN-wedding/yjbn8.jpeg';
 import yjbn9 from '../img/YJBN-wedding/yjbn9.jpeg';
 import yjbn10 from '../img/YJBN-wedding/yjbn10.jpeg';
+import yjbn11 from '../img/YJBN-wedding/yjbn11.jpeg';
+import yjbn12 from '../img/YJBN-wedding/yjbn12.jpeg';
+import yjbn13 from '../img/YJBN-wedding/yjbn13.jpeg';
+import yjbn14 from '../img/YJBN-wedding/yjbn14.jpeg';
+import yjbn15 from '../img/YJBN-wedding/yjbn15.jpeg';
+import yjbn16 from '../img/YJBN-wedding/yjbn16.jpeg';
+import yjbn17 from '../img/YJBN-wedding/yjbn17.jpeg';
 
 function Gallery() {
     return (
@@ -75,6 +82,41 @@ function Gallery() {
                                         <img src={yjbn10} className="img-thumbnail img-fluid" />
                                     </a>
                                 </li>
+                                <li className="list-inline-item">
+                                    <a id="carousel-selector-10" data-slide-to="10" data-target="#custCarousel">
+                                        <img src={yjbn11} className="img-thumbnail img-fluid" />
+                                    </a>
+                                </li>
+                                <li className="list-inline-item">
+                                    <a id="carousel-selector-11" data-slide-to="11" data-target="#custCarousel">
+                                        <img src={yjbn12} className="img-thumbnail img-fluid" />
+                                    </a>
+                                </li>
+                                <li className="list-inline-item">
+                                    <a id="carousel-selector-12" data-slide-to="12" data-target="#custCarousel">
+                                        <img src={yjbn13} className="img-thumbnail img-fluid" />
+                                    </a>
+                                </li>
+                                <li className="list-inline-item">
+                                    <a id="carousel-selector-13" data-slide-to="13" data-target="#custCarousel">
+                                        <img src={yjbn14} className="img-thumbnail img-fluid" />
+                                    </a>
+                                </li>
+                                <li className="list-inline-item">
+                                    <a id="carousel-selector-14" data-slide-to="14" data-target="#custCarousel">
+                                        <img src={yjbn15} className="img-thumbnail img-fluid" />
+                                    </a>
+                                </li>
+                                <li className="list-inline-item">
+                                    <a id="carousel-selector-15" data-slide-to="15" data-target="#custCarousel">
+                                        <img src={yjbn16} className="img-thumbnail img-fluid" />
+                                    </a>
+                                </li>
+                                <li className="list-inline-item">
+                                    <a id="carousel-selector-16" data-slide-to="16" data-target="#custCarousel">
+                                        <img src={yjbn17} className="img-thumbnail img-fluid" />
+                                    </a>
+                                </li>
                             </ol>
                         </div>
 
@@ -108,6 +150,27 @@ function Gallery() {
                             </div>
                             <div className="carousel-item">
                                 <img className="d-block mw-100" src={yjbn10} alt="Responsive image" />
+                            </div>
+                            <div className="carousel-item">
+                                <img className="d-block mw-100" src={yjbn11} alt="Responsive image" />
+                            </div>
+                            <div className="carousel-item">
+                                <img className="d-block mw-100" src={yjbn12} alt="Responsive image" />
+                            </div>
+                            <div className="carousel-item">
+                                <img className="d-block mw-100" src={yjbn13} alt="Responsive image" />
+                            </div>
+                            <div className="carousel-item">
+                                <img className="d-block mw-100" src={yjbn14} alt="Responsive image" />
+                            </div>
+                            <div className="carousel-item">
+                                <img className="d-block mw-100" src={yjbn15} alt="Responsive image" />
+                            </div>
+                            <div className="carousel-item">
+                                <img className="d-block mw-100" src={yjbn16} alt="Responsive image" />
+                            </div>
+                            <div className="carousel-item">
+                                <img className="d-block mw-100" src={yjbn17} alt="Responsive image" />
                             </div>
 
                             <a className="carousel-control-prev" href="#custCarousel" role="button" data-slide="prev">

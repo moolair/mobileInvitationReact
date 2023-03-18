@@ -39,8 +39,8 @@ function App() {
         </div>
       </div>
 
-      <div className="container text-center">
-        {/* <div className="row">
+      {/* <div className="container text-center"> */}
+      {/* <div className="row">
           <div className="col bg-paleyellow">
             <div className="row">
               <div className="col">
@@ -56,10 +56,10 @@ function App() {
             </div>
           </div>
         </div> */}
-        <img src={invitation} className="d-block w-100" alt="..." />
-        <img src={weddingDate} className="d-block w-100" alt="..." />
+      <img src={invitation} className="d-block w-100" alt="..." />
+      <img src={weddingDate} className="d-block w-100" alt="..." />
 
-      </div>
+      {/* </div> */}
 
       {/* 연락처 div */}
       <div className="container text-center">
