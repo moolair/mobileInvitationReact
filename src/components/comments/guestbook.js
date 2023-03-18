@@ -32,18 +32,18 @@ function GuestBook() {
                 </div>
                 <h3>GUEST BOOK</h3>
                 <div className="row">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">이름</span>
+                    <div className="input-group mb-3">
+                        <div className="input-group-prepend">
+                            <span className="input-group-text" id="inputGroup-sizing-default">이름</span>
                         </div>
                         <input className='form-control'
                             onChange={(n) => setName(n.target.value)}
                             value={name}
                             type="text" placeholder="Enter your name" />
                     </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroup-sizing-default">메세지</span>
+                    <div className="input-group mb-3">
+                        <div className="input-group-prepend">
+                            <span className="input-group-text" id="inputGroup-sizing-default">메세지</span>
                         </div>
                         <input className='form-control'
                             onChange={(n) => setMessage(n.target.value)}

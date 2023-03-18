@@ -59,7 +59,7 @@ const Gift = () => {
                                 <p>IBK기업은행 (예금주: 조영진)</p>
                                 <p id="yj1">02802204018234</p>
                             </div>
-                            <br />
+                            {/* <br />
                             <div className="row justify-content-between">
                                 <h4 className="col-auto mr-auto offset-1">신랑 아버지 계좌</h4>
                                 <button onClick={() => copyID('YJP')} type="button" className="col btn btn-secondary col-auto"
@@ -85,7 +85,7 @@ const Gift = () => {
                             <div className="text-left offset-1">
                                 <p>IBK기업은행 (예금주: 조영진)</p>
                                 <p id="YJM">02802204018234</p>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="close" data-dismiss="modal" aria-label="Close">

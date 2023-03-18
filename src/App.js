@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import YJBNsubmain from './img/main/1.jpeg';
-// import YJBNsubmain2 from './img/yj.png';
+import invitation from './img/main/invitation.jpg';
+import weddingDate from './img/main/weddingDate.jpg';
 import './App.css';
 
 function App() {
@@ -22,30 +23,7 @@ function App() {
                     <h5>저희 결혼합니다.</h5>
                   </div>
                 </div>
-                {/* <div className="carousel-item">
-                  <img src={YJBNsubmain2} className="d-block w-100" alt="..." />
-                  <div className="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                  </div>
-                </div>
-                <div className="carousel-item">
-                  <img src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.6435-9/180978949_314228950059549_1005358403722529104_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=lHAzdB6etLEAX_T6I30&_nc_ht=scontent-sea1-1.xx&oh=00_AfAUCKcgTkZpHcVU-hOUJl2APfBV3dfNfaAOzgCMHug12w&oe=6402D2CE"
-                    className="d-block w-100" alt="..." />
-                  <div className="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                  </div>
-                </div> */}
               </div>
-              {/* <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="sr-only">Previous</span>
-              </a>
-              <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="sr-only">Next</span>
-              </a> */}
             </div>
           </div>
         </div>
@@ -62,7 +40,7 @@ function App() {
       </div>
 
       <div className="container text-center">
-        <div className="row">
+        {/* <div className="row">
           <div className="col bg-paleyellow">
             <div className="row">
               <div className="col">
@@ -77,7 +55,10 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+        <img src={invitation} className="d-block w-100" alt="..." />
+        <img src={weddingDate} className="d-block w-100" alt="..." />
+
       </div>
 
       {/* 연락처 div */}

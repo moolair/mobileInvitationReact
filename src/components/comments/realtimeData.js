@@ -45,7 +45,7 @@ export class RealtimeData extends React.Component {
                                         </h5>
                                         <p className="card-text">{row.data.message}</p>
                                         <p className="card-text">{row.data.date}</p>
-                                        {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
+                                        {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
                                     </div>
                                 </div>
                             )
