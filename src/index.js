@@ -24,7 +24,7 @@ root.render(
     <FirebaseProvider>
       <RealtimeData />
     </FirebaseProvider>
-    <footer class="container text-center">
+    <footer className="container text-center">
       <p>YJ♡BN Mobile Invitation | 2023.04.22</p>
     </footer>
   </React.StrictMode>

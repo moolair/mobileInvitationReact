@@ -109,7 +109,7 @@ function App() {
             <h4>신부측 혼주</h4>
             <div>
               <br />
-              <h5>아버지 이현주</h5>
+              <h5>아버지 이주현</h5>
               <a href='tel:01053497688' className="fa fa-phone fa-2x col-3" aria-hidden="true"></a>
               <a href="sms:01053497688" className="fa fa-comment-dots fa-2x col-3" aria-hidden="true"></a>
             </div>

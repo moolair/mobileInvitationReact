@@ -116,8 +116,8 @@ const Gift = () => {
                                 <div className="col-1"></div>
                             </div>
                             <div className="text-left offset-1">
-                                <p>IBK기업은행 (예금주: 조영진)</p>
-                                <p id="BN">82381268665</p>
+                                <p>농협 (예금주: 노인숙)</p>
+                                <p id="BN">3511137371343</p>
                             </div>
                             <br />
                             <div className="row justify-content-between">
@@ -129,8 +129,8 @@ const Gift = () => {
                                 <div className="col-1"></div>
                             </div>
                             <div className="text-left offset-1">
-                                <p>IBK기업은행 (예금주: 조영진)</p>
-                                <p id="BNP">0192703214</p>
+                                <p>농협 (예금주: 이주현)</p>
+                                <p id="BNP">3510328784843</p>
                             </div>
 
                             <br />
@@ -143,8 +143,8 @@ const Gift = () => {
                                 <div className="col-1"></div>
                             </div>
                             <div className="text-left offset-1">
-                                <p>IBK기업은행 (예금주: 조영진)</p>
-                                <p id="BNM">2827386017027</p>
+                                <p>농협 (예금주: 노인숙)</p>
+                                <p id="BNM">3511137371343</p>
                             </div>
                         </div>
                         <div className="modal-footer">
