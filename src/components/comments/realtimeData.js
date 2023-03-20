@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { database } from '../firebase';
 import { ref, onValue } from 'firebase/database';
 import { render } from '@testing-library/react';
-
+import App from '../../App';
 // export const db = database;
+import { CrudPanel } from './crudPanel';
+
+let UniqueNum = 0;
 
 export class RealtimeData extends React.Component {
     constructor() {
@@ -11,6 +14,7 @@ export class RealtimeData extends React.Component {
         this.state = {
             data: []
         }
+        // this.interface = this.interface.bind(this);
     }
 
     componentDidMount() {
@@ -27,6 +31,11 @@ export class RealtimeData extends React.Component {
         });
     }
 
+    // modalState(val) {
+    //     const index = val;
+    //     console.log(index);
+    // }
+
     render() {
         return (
             <div>
@@ -34,25 +43,24 @@ export class RealtimeData extends React.Component {
                     <div className='row'>
                         {this.state.data.reverse().map((row, index) => {
                             return (
-                                <div className="card col-12 mb-4">
+                                <div key={UniqueNum++} className="card col-12 mb-4" >
                                     <div className="card-body">
-
-                                        <h5 className="card-title">
-                                            {/* {index} */}
-                                            {/* {row.key} */}
+                                        <CrudPanel keyDate={row.key} record={row.data} />
+                                        <h5 id='guestName' className="card-title">
+                                            {index + 1}
                                             {row.data.name}
-
                                         </h5>
-                                        <p className="card-text">{row.data.message}</p>
-                                        <p className="card-text">{row.data.date}</p>
-                                        {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
+                                        <p id='guestMessage' className="card-text">{row.data.message}</p>
+                                        <p id='guestDate' className="card-text text-right small" >{row.data.date}</p>
                                     </div>
+
                                 </div>
                             )
                         })}
                     </div>
                 </div>
-            </div>
+            </div >
         );
     }
 }
+

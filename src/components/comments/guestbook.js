@@ -9,6 +9,7 @@ function GuestBook() {
     const firebase = useFirebase(); //const db
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
+    const [password, setPassword] = useState("");
     const date = Date().toLocaleString('ko-KR', { timeZone: 'UTC' });
     // console.log('Firebase', firebase);
 
@@ -17,10 +18,12 @@ function GuestBook() {
         set(ref(db, 'guests/' + date), {
             name: name,
             message: message,
-            date: date
+            date: date,
+            password: password
         });
         setName('');
         setMessage('');
+        setPassword('');
     }
 
     return (
@@ -49,6 +52,15 @@ function GuestBook() {
                             onChange={(n) => setMessage(n.target.value)}
                             value={message}
                             type="text" placeholder="Enter your message" />
+                    </div>
+                    <div className="input-group mb-3">
+                        <div className="input-group-prepend">
+                            <span className="input-group-text" id="inputGroup-sizing-default">암호</span>
+                        </div>
+                        <input className='form-control'
+                            onChange={(n) => setPassword(n.target.value)}
+                            value={password}
+                            type="password" placeholder="Enter your password" />
                     </div>
                     <button type="reset" className="btn btn-dark btn-lg btn-block"
                         onClick={Push}
