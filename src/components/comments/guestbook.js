@@ -1,12 +1,14 @@
-import { useEffect, useState } from 'react';
-import { useFirebase } from '../firebase';
+import React, { useState } from 'react';
+import StartFirebase from '../firebase';
+import { uid } from "uid";
 // import { RealtimeData } from './realtimeData';
 import { getDatabase, ref, set } from "firebase/database";
 import memoryBooth from '../../img/main/memoryBooth.png';
 
 function GuestBook() {
 
-    const firebase = useFirebase(); //const db
+    // const firebase = useFirebase(); //const db
+    const db = StartFirebase();
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
     const [password, setPassword] = useState("");
@@ -14,8 +16,9 @@ function GuestBook() {
     // console.log('Firebase', firebase);
 
     const Push = () => {
-        const db = getDatabase();
-        set(ref(db, 'guests/' + date), {
+        // const uuid = uid();
+        // set(ref(db, 'guests/' + `/${uuid}`), {
+        set(ref(db, 'guests/' + name), {
             name: name,
             message: message,
             date: date,
@@ -64,6 +67,7 @@ function GuestBook() {
                     </div>
                     <button type="reset" className="btn btn-dark btn-lg btn-block"
                         onClick={Push}
+                        disabled={!name + !message + !password}
                     >축하메세지 남기기</button>
                 </div>
             </div>

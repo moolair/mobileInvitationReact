@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { database } from '../firebase';
+import StartFirebase from '../firebase';
 import { ref, onValue } from 'firebase/database';
 import { render } from '@testing-library/react';
 import App from '../../App';
 // export const db = database;
-import { CrudPanel } from './crudPanel';
+import CrudPanel from './CrudPanel';
 
 let UniqueNum = 0;
+const db = StartFirebase();
 
 export class RealtimeData extends React.Component {
     constructor() {
@@ -18,7 +19,7 @@ export class RealtimeData extends React.Component {
     }
 
     componentDidMount() {
-        const dbRef = ref(database, 'guests');
+        const dbRef = ref(db, 'guests');
 
         onValue(dbRef, (snapshot) => {
             let records = [];
@@ -31,12 +32,20 @@ export class RealtimeData extends React.Component {
         });
     }
 
-    // modalState(val) {
-    //     const index = val;
-    //     console.log(index);
-    // }
+    shouldComponentUpdate(nextProps, nextState) {
+        // console.warn(prevProps);
+        // return true;
+        if (this.state.data !== nextState.data) {
+            console.log('SCU is true');
+            return true;
+        }
+        console.log('SCU is false');
+
+        return false;
+    }
 
     render() {
+        console.warn('inside render');
         return (
             <div>
                 <div className="container">
@@ -45,15 +54,14 @@ export class RealtimeData extends React.Component {
                             return (
                                 <div key={UniqueNum++} className="card col-12 mb-4" >
                                     <div className="card-body">
-                                        <CrudPanel keyDate={row.key} record={row.data} />
+                                        <CrudPanel keyName={row.key} record={row.data} />
                                         <h5 id='guestName' className="card-title">
-                                            {index + 1}
+                                            {/* {index + 1} */}
                                             {row.data.name}
                                         </h5>
                                         <p id='guestMessage' className="card-text">{row.data.message}</p>
                                         <p id='guestDate' className="card-text text-right small" >{row.data.date}</p>
                                     </div>
-
                                 </div>
                             )
                         })}

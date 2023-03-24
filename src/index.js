@@ -21,14 +21,34 @@ root.render(
     <Gift />
     {/* <Comments currentUserId={3} /> */}
     <GuestBook />
-    <FirebaseProvider>
-      <RealtimeData />
-    </FirebaseProvider>
+    {/* <FirebaseProvider> */}
+    <RealtimeData />
+    {/* </FirebaseProvider> */}
     <footer className="container text-center">
       <p>YJ♡BN Mobile Invitation | 2023.04.22</p>
     </footer>
   </React.StrictMode>
 );
+// function index() {
+//   return (
+//     <>
+//       <App />
+//       <Gallery />
+//       <Location />
+//       <Gift />
+//       {/* <Comments currentUserId={3} /> */}
+//       <GuestBook />
+//       {/* <FirebaseProvider> */}
+//       <RealtimeData />
+//       {/* </FirebaseProvider> */}
+//       <footer className="container text-center">
+//         <p>YJ♡BN Mobile Invitation | 2023.04.22</p>
+//       </footer>
+//     </>
+//   );
+// }
+
+// export default App;
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

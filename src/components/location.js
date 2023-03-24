@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import map from '../img/main/map.png';
 
 const { kakao } = window;
 
@@ -29,7 +30,7 @@ const Location = () => {
     return (
         <div className="container text-center">
             <div className="row">
-                <div className="col">
+                <div className="col-12">
                     <h3>Location</h3>
                     <br />
                     {/* <!-- 맵 생성 실행 --> */}
@@ -38,6 +39,9 @@ const Location = () => {
                     <h4>엘리스 몽드</h4>
                     <p>서울특별시 용산구 소월로 302</p>
                     <p>02-511-2266 / 02-6259-1010</p>
+                </div>
+                <div className='col'>
+                    <img className="d-block mw-100" src={map} alt="Responsive image" />
                 </div>
             </div>
         </div>
