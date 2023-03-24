@@ -4,35 +4,42 @@ import { ref, set, remove, child, get } from 'firebase/database';
 import React, { useCallback, useState, useRef } from 'react';
 // import { InputGroup } from 'reactstrap';
 // import InputPanel from './inputPanel';
-import { uid } from "uid";
+// import { uid } from "uid";
 
 const db = StartFirebase();
 
 function CrudPanel({ keyName, record }) {
 
-    console.log('CrudPanel key: ' + keyName);
+    // console.log('CrudPanel key: ' + keyName);
 
     const [input, setInput] = useState("");
     const [name, setName] = useState("");
 
-    // //snapshot.foreach to find child name
-    // const childName = ref(db, 'guests/');
-    // get(childName, (snapshot) => {
-    //     const data = snapshot.child("name");
-    //     console.log(data);
-    // })
-    // //when found, assign it to address
-    // //then call deleteData
 
-    //update date orderby in firebase rules
+    let childKey = '';
+    get(ref(db, 'guests/')).then(snapshot => {
+
+        snapshot.forEach(childSnapshot => {
+
+            childSnapshot.forEach(grandchildSnapshot => {
+                let item = grandchildSnapshot.val();
+                // item.key = grandchildSnapshot.key;
+                if (item === name) {
+                    childKey = childSnapshot.key;
+                    console.log('childSnapshot: ' + childSnapshot.key);
+                }
+                console.log('item: ' + item);
+            })
+        })
+        // this.setState({ data: records });
+    })
+    // console.log('childKey: ' + childKey);
 
     const deleteData = () => {
-        // const dbRef = ref(db);
-        // const record = this.getAllData().id;
-        console.log('name: ' + name);
-        const address = 'guests/' + name;
-        console.log('address: ' + address);
-        // remove(ref(db, address));
+
+        // console.log('date: ' + childKey);
+        const address = 'guests/' + childKey;
+        // console.log('address: ' + address);
         const isPasswordCorrect = (password) => {
             console.log('Password: ' + password);
             console.log('inputPw: ' + input);
@@ -47,11 +54,13 @@ function CrudPanel({ keyName, record }) {
             if (snapshot.exists() && isPasswordCorrect(pw)) {
                 // console.log(this.state.modKeydate);
                 remove(ref(db, address));
+                alert('메세지가 지워졌습니다.');
             }
             else {
                 alert('이름 또는 암호가 잘못되었습니다.');
             }
-            // this.inputPassword = '';
+            setName('');
+            setInput('');
         })
     }
 

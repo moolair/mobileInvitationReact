@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import StartFirebase from '../firebase';
-import { ref, onValue } from 'firebase/database';
+import { ref, onValue, query, orderByChild } from 'firebase/database';
 import { render } from '@testing-library/react';
 import App from '../../App';
 // export const db = database;
@@ -8,6 +8,7 @@ import CrudPanel from './CrudPanel';
 
 let UniqueNum = 0;
 const db = StartFirebase();
+const topUserPostsRef = query(ref(db, 'guests/'));
 
 export class RealtimeData extends React.Component {
     constructor() {
@@ -44,6 +45,7 @@ export class RealtimeData extends React.Component {
         return false;
     }
 
+
     render() {
         console.warn('inside render');
         return (
@@ -56,7 +58,7 @@ export class RealtimeData extends React.Component {
                                     <div className="card-body">
                                         <CrudPanel keyName={row.key} record={row.data} />
                                         <h5 id='guestName' className="card-title">
-                                            {/* {index + 1} */}
+
                                             {row.data.name}
                                         </h5>
                                         <p id='guestMessage' className="card-text">{row.data.message}</p>
@@ -65,6 +67,7 @@ export class RealtimeData extends React.Component {
                                 </div>
                             )
                         })}
+                        {/* {topUserPostsRef} */}
                     </div>
                 </div>
             </div >

@@ -1,24 +1,18 @@
 import React, { useState } from 'react';
 import StartFirebase from '../firebase';
-import { uid } from "uid";
-// import { RealtimeData } from './realtimeData';
 import { getDatabase, ref, set } from "firebase/database";
 import memoryBooth from '../../img/main/memoryBooth.png';
 
 function GuestBook() {
 
-    // const firebase = useFirebase(); //const db
     const db = StartFirebase();
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
     const [password, setPassword] = useState("");
     const date = Date().toLocaleString('ko-KR', { timeZone: 'UTC' });
-    // console.log('Firebase', firebase);
 
     const Push = () => {
-        // const uuid = uid();
-        // set(ref(db, 'guests/' + `/${uuid}`), {
-        set(ref(db, 'guests/' + name), {
+        set(ref(db, 'guests/' + date), {
             name: name,
             message: message,
             date: date,
