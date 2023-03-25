@@ -23,13 +23,13 @@ const Gift = () => {
                         <p>축복의 의미로 마음을 전달해보세요.</p>
                         <img src="https://www.flaticon.com/free-animated-icon/bride_9284546?term=bride&page=1&position=1&origin=search&related_id=9284546"
                             alt="" />
-                        <button type="button" className="btn btn-light btn-lg btn-block" data-toggle="modal"
-                            data-target="#bankInfoModal">
+                        <button type="button" className="btn btn-light btn-lg btn-block" data-bs-toggle="modal"
+                            data-bs-target="#bankInfoModal">
                             {/* <i className="fa fa-male fa-shake" style="--fa-animation-duration: 2s;" aria-hidden="true"></i> */}
                             신랑측 계좌번호
                         </button>
-                        <button type="button" className="btn btn-light btn-lg btn-block" data-toggle="modal"
-                            data-target="#bnbankInfoModal">
+                        <button type="button" className="btn btn-light btn-lg btn-block" data-bs-toggle="modal"
+                            data-bs-target="#bnbankInfoModal">
                             {/* <i className="fa fa-female fa-bounce"></i> 신부측 */}
                             신부측 계좌번호
                         </button>

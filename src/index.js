@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { FirebaseProvider } from './components/firebase';
+// import { FirebaseProvider } from './components/firebase';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
@@ -29,6 +29,7 @@ root.render(
     </footer>
   </React.StrictMode>
 );
+
 // function index() {
 //   return (
 //     <>

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import map from '../img/main/map.jpeg';
+import map from '../img/main/map.png';
 
 const { kakao } = window;
 

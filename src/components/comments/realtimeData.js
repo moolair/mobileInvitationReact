@@ -4,7 +4,7 @@ import { ref, onValue, query, orderByChild } from 'firebase/database';
 import { render } from '@testing-library/react';
 import App from '../../App';
 // export const db = database;
-import CrudPanel from './CrudPanel';
+import CrudPanel from './crudPanel';
 
 let UniqueNum = 0;
 const db = StartFirebase();
@@ -33,17 +33,17 @@ export class RealtimeData extends React.Component {
         });
     }
 
-    shouldComponentUpdate(nextProps, nextState) {
-        // console.warn(prevProps);
-        // return true;
-        if (this.state.data !== nextState.data) {
-            console.log('SCU is true');
-            return true;
-        }
-        console.log('SCU is false');
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     // console.warn(prevProps);
+    //     // return true;
+    //     if (this.state.data !== nextState.data) {
+    //         console.log('SCU is true');
+    //         return true;
+    //     }
+    //     console.log('SCU is false');
 
-        return false;
-    }
+    //     return false;
+    // }
 
 
     render() {
