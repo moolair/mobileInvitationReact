@@ -88,10 +88,7 @@ const Gift = () => {
                             </div> */}
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">닫기</span>
-                            </button>
-                            <div className="col-1"></div>
+                            <button type="button" class="btn mr-4" data-bs-dismiss="modal">닫기</button>
                         </div>
                     </div>
                 </div>
@@ -148,10 +145,7 @@ const Gift = () => {
                             </div>
                         </div>
                         <div className="modal-footer">
-                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">닫기</span>
-                            </button>
-                            <div className="col-1"></div>
+                            <button type="button" class="btn mr-4" data-bs-dismiss="modal">닫기</button>
                         </div>
                     </div>
                 </div>
