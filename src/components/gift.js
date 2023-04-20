@@ -57,7 +57,7 @@ const Gift = () => {
                             </div>
                             <div className="text-left offset-1">
                                 <p>IBK기업은행 (예금주: 조영진)</p>
-                                <p id="yj1">02802204018234</p>
+                                <p id="yj1">20809925101011</p>
                             </div>
                             {/* <br />
                             <div className="row justify-content-between">
