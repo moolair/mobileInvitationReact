@@ -12,7 +12,6 @@ function copyID(id) {
     navigator.clipboard.writeText(text);
 }
 
-
 const Gift = () => {
     return (
         <div>
@@ -41,11 +40,6 @@ const Gift = () => {
             <div className="modal fade" id="bankInfoModal" tabIndex="-1" role="dialog" aria-hidden="true">
                 <div className="modal-dialog modal-lg" role="document">
                     <div className="modal-content">
-                        {/* <!-- <div className="modal-header">
-                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">×</span>
-                                </button>
-                              </div> --> */}
                         <div className="modal-body">
                             <div className="row justify-content-between">
                                 <h4 className="col-auto mr-auto offset-1">신랑 계좌</h4>
@@ -59,33 +53,6 @@ const Gift = () => {
                                 <p>XX은행 (예금주: XXX)</p>
                                 <p id="yj1">0000000000</p>
                             </div>
-                            {/* <br />
-                            <div className="row justify-content-between">
-                                <h4 className="col-auto mr-auto offset-1">신랑 아버지 계좌</h4>
-                                <button onClick={() => copyID('YJP')} type="button" className="col btn btn-secondary col-auto"
-                                    data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">복사하기
-                                    <i className="fa fa-copy" aria-hidden="true"></i>
-                                </button>
-                                <div className="col-1"></div>
-                            </div>
-                            <div className="text-left offset-1">
-                                <p>IBK기업은행 (예금주: 조영진)</p>
-                                <p id="YJP">123456</p>
-                            </div>
-
-                            <br />
-                            <div className="row justify-content-between">
-                                <h4 className="col-auto mr-auto offset-1">신랑 어머니 계좌</h4>
-                                <button onClick={() => copyID('YJM')} type="button" className="col btn btn-secondary col-auto"
-                                    data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">복사하기
-                                    <i className="fa fa-copy" aria-hidden="true"></i>
-                                </button>
-                                <div className="col-1"></div>
-                            </div>
-                            <div className="text-left offset-1">
-                                <p>IBK기업은행 (예금주: 조영진)</p>
-                                <p id="YJM">02802204018234</p>
-                            </div> */}
                         </div>
                         <div className="modal-footer">
                             <button type="button" class="btn mr-4" data-bs-dismiss="modal">닫기</button>
@@ -98,11 +65,6 @@ const Gift = () => {
             <div className="modal fade" id="bnbankInfoModal" tabIndex="-1" role="dialog" aria-hidden="true">
                 <div className="modal-dialog modal-lg" role="document">
                     <div className="modal-content">
-                        {/* <!-- <div className="modal-header">
-                                  <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                  </button>
-                                </div> --> */}
                         <div className="modal-body">
                             <div className="row justify-content-between">
                                 <h4 className="col-auto mr-auto offset-1">신부 계좌</h4>

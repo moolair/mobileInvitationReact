@@ -30,6 +30,10 @@ root.render(
   </React.StrictMode>
 );
 
+/*Aug 26, 2023
+YJ
+Not used function
+*/
 // function index() {
 //   return (
 //     <>
@@ -50,6 +54,7 @@ root.render(
 // }
 
 // export default App;
+//END Aug 26, 2023
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

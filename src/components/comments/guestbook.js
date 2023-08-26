@@ -59,10 +59,14 @@ function GuestBook() {
                             value={password}
                             type="password" placeholder="Enter your password" />
                     </div>
-                    <button type="reset" className="btn btn-dark btn-lg btn-block"
+                    {/* Aug 26, 2023
+                    YJ
+                    since the invitation and weddit has been ended, this button is disabled for security. */}
+                    {/* <button type="reset" className="btn btn-dark btn-lg btn-block"
                         onClick={Push}
                         disabled={!name + !message + !password}
-                    >축하메세지 남기기</button>
+                    >축하메세지 남기기</button> */}
+                    {/* END Aug 26, 2023 */}
                 </div>
             </div>
 

@@ -24,3 +24,6 @@ yarn-error.log*
 
 #img
 /src/img
+
+#firebase config
+src/components/firebase_config.js

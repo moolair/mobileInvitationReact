@@ -16,7 +16,6 @@ export class RealtimeData extends React.Component {
         this.state = {
             data: []
         }
-        // this.interface = this.interface.bind(this);
     }
 
     componentDidMount() {
@@ -33,6 +32,10 @@ export class RealtimeData extends React.Component {
         });
     }
 
+    /*Aug 26, 2023
+    YJ
+    does not require shouldComponentUpdate
+    */
     // shouldComponentUpdate(nextProps, nextState) {
     //     // console.warn(prevProps);
     //     // return true;
@@ -44,6 +47,7 @@ export class RealtimeData extends React.Component {
 
     //     return false;
     // }
+    //END AUG 26, 2023
 
 
     render() {
